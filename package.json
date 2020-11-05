@@ -1,24 +1,33 @@
 {
-  "name": "wowchemy-rtl-module",
-  "version": "1.0.0",
-  "description": "",
-  "main": "postcss.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/paazca/wowchemy-rtl-module.git"
-  },
-  "author": "Paaz C.A.",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/paazca/wowchemy-rtl-module/issues"
-  },
-  "homepage": "https://github.com/paazca/wowchemy-rtl-module#readme",
+ "author": "Paaz C.A.",
+ "bugs": {
+  "url": "https://github.com/paazca/wowchemy-rtl-module/issues"
+ },
+ "comments": {
   "dependencies": {
-    "postcss": "8.1.0",
-    "postcss-cli": "8.0.0",
-    "rtlcss": "^2.6.0"
-  }
+   "postcss": "project",
+   "postcss-cli": "project",
+   "rtlcss": "project"
+  },
+  "devDependencies": {}
+ },
+ "dependencies": {
+  "postcss": "8.1.0",
+  "postcss-cli": "8.0.0",
+  "rtlcss": "^2.6.0"
+ },
+ "description": "",
+ "devDependencies": {},
+ "homepage": "https://github.com/paazca/wowchemy-rtl-module#readme",
+ "license": "ISC",
+ "main": "postcss.config.js",
+ "name": "wowchemy-rtl-module",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/paazca/wowchemy-rtl-module.git"
+ },
+ "scripts": {
+  "test": "echo \"Error: no test specified\" \u0026\u0026 exit 1"
+ },
+ "version": "1.0.0"
 }
