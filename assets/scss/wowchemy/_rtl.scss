@@ -36,5 +36,10 @@ html[dir="rtl"] {
     position: absolute;
     left: 0;
   }
+
+  // fix see all arrow direction
+  .see-all .fa-angle-right:before {
+    content: "\f104";
+  }
 }
 /*! rtl:end:ignore */
