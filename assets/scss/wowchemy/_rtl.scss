@@ -26,15 +26,12 @@ html[dir="rtl"] {
 
   // fix footnote arrow direction
   a.footnote-backref {
-    visibility: hidden;
-    position: relative;
+    font-size: 0;
   }
 
   a.footnote-backref:after {
     content: '\21AA';
-    visibility: visible;
-    position: absolute;
-    left: 0;
+    font-size: 1rem;
   }
 
   // fix see all arrow direction
