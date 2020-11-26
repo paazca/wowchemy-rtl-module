@@ -9,9 +9,11 @@ A Hugo module in order to use [Wowchemy](https://github.com/wowchemy/wowchemy-hu
     [[module.imports]]
       path = "github.com/paazca/wowchemy-rtl-module"
   ```
+* Install [Node.js](https://nodejs.org/)
 * Run `hugo mod npm pack` in order to create a consolidated package.json for installing the npm dependencies.
+* Run `npm install` to install the npm dependencies.
 * Additional CSS modifications for RTL languages can be added to `assets/scss/wowchemy/_rtl.scss`.
 
 
 ### Note:
-This module was built for Wowchemy v5.0.0-beta.0. Using a different version may require you to modify `layouts/partials/site_head.html` by replacing `{{ $style := slice $css_bundle_head $style | resources.Concat "css/wowchemy.css" }}` with `{{ $style := slice $css_bundle_head $style | resources.Concat "css/wowchemy.css" | resources.PostCSS }}`
+Using a different version of Wowchemy than the one this was built for may require you to copy `layouts/partials/site_head.html` from the Wowchemy repo and replace `{{ $style := slice $css_bundle_head $style | resources.Concat "css/wowchemy.css" }}` with `{{ $style := slice $css_bundle_head $style | resources.Concat "css/wowchemy.css" | resources.PostCSS }}`
