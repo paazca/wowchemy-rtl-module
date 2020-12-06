@@ -1,6 +1,8 @@
 # wowchemy-rtl-module
 A Hugo module in order to use [Wowchemy](https://github.com/wowchemy/wowchemy-hugo-modules/) with right-to-left languages (such as Hebrew and Arabic) by converting the CSS using [RTLCSS](https://github.com/MohammadYounes/rtlcss).
 
+Now with multilingual support! An LTR version can exist alongside an RTL version. This module will automatically create and use `wowchemy-rtl.css` for any RTL languages.
+
 ## How to use
 * Add to `config/_default/config.toml` (make sure it's imported before wowchemy):
 
@@ -16,4 +18,10 @@ A Hugo module in order to use [Wowchemy](https://github.com/wowchemy/wowchemy-hu
 
 
 ### Note:
-Using a different version of Wowchemy than the one this was built for may require you to copy `layouts/partials/site_head.html` from the Wowchemy repo and replace `{{ $style := slice $css_bundle_head $style | resources.Concat "css/wowchemy.css" }}` with `{{ $style := slice $css_bundle_head $style | resources.Concat "css/wowchemy.css" | resources.PostCSS }}`
+Using a different version of Wowchemy than the one this was built for may require you to copy `layouts/partials/site_head.html` from the Wowchemy repo and add the following code right after the line `{{ $style := slice $css_bundle_head $style | resources.Concat "css/wowchemy.css" }}`:
+```
+{{- $language_code := site.LanguageCode | default "en-us" -}}
+{{- if in site.Data.i18n.rtl.rtl $language_code -}}
+  {{- $style = slice $style | resources.Concat "css/wowchemy-rtl.css" | resources.PostCSS -}}
+{{- end -}}
+```

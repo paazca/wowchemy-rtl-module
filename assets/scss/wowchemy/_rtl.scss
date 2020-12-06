@@ -9,7 +9,8 @@ html[dir="rtl"] {
   }
 
   // make sure code block dir is ltr
-  pre, code {
+  pre,
+  code {
     text-align: left;
     direction: ltr;
   }
