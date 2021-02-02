@@ -22,6 +22,6 @@ Using a different version of Wowchemy than the one this was built for may requir
 ```
 {{- $language_code := site.LanguageCode | default "en-us" -}}
 {{- if in site.Data.i18n.rtl.rtl $language_code -}}
-  {{- $style = slice $style | resources.Concat "css/wowchemy-rtl.css" | resources.PostCSS (dict "use" "rtlcss") -}}
+  {{- $style = slice $style | resources.Concat "css/wowchemy-rtl.css" | resources.PostCSS (dict "use" "rtlcss" "noMap" true) -}}
 {{- end -}}
 ```
