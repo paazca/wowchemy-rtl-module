@@ -14,7 +14,7 @@ Now with multilingual support! An LTR version can exist alongside an RTL version
 * Install [Node.js](https://nodejs.org/)
 * Run `hugo mod npm pack` in order to create a consolidated package.json for installing the npm dependencies.
 * Run `npm install` to install the npm dependencies.
-* Additional CSS modifications for RTL languages can be added to `assets/scss/wowchemy/_rtl.scss`.
+* Additional CSS modifications for RTL languages can be added to `assets/scss/wowchemy/layouts/_rtl.scss`.
 
 
 ### Note:
@@ -22,6 +22,6 @@ Using a different version of Wowchemy than the one this was built for may requir
 ```
 {{- $language_code := site.LanguageCode | default "en-us" -}}
 {{- if in site.Data.i18n.rtl.rtl $language_code -}}
-  {{- $style = slice $style | resources.Concat "css/wowchemy-rtl.css" | resources.PostCSS -}}
+  {{- $style = slice $style | resources.Concat "css/wowchemy-rtl.css" | resources.PostCSS (dict "use" "rtlcss") -}}
 {{- end -}}
 ```
