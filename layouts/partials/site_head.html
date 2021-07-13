@@ -193,9 +193,9 @@
   {{- end -}}
   {{ $style := slice $css_bundle_head $style | resources.Concat "css/wowchemy.css" }}
   {{- $language_code := site.LanguageCode | default "en-us" -}}
-{{- if in site.Data.i18n.rtl.rtl $language_code -}}
-  {{- $style = slice $style | resources.Concat "css/wowchemy-rtl.css" | resources.PostCSS (dict "use" "rtlcss" "noMap" true) -}}
-{{- end -}}
+  {{- if in site.Data.i18n.rtl.rtl $language_code -}}
+    {{- $style = slice $style | resources.Concat "css/wowchemy-rtl.css" | resources.PostCSS (dict "use" "rtlcss" "noMap" true) -}}
+  {{- end -}}
   {{- if eq (getenv "WC_POST_CSS") "true" -}}
     {{- $style = $style | postCSS -}}
   {{- end -}}
