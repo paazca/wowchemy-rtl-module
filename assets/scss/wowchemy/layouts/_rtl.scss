@@ -15,6 +15,12 @@ html[dir="rtl"] {
     direction: ltr;
   }
 
+  // fix code copy button
+  .btn-copy-code {
+    right: 4px;
+    left: unset;
+  }
+
   // keep back-to-top on the right
   .float-right {
     float: right !important;
